@@ -76,6 +76,8 @@ def load_data():
     return df
 
 df = load_data()
+st.write(df.head())
+st.write(df.columns)
 # Load model and scaler
 model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")
