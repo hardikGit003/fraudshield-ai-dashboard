@@ -19,15 +19,15 @@ An AI-powered fraud detection and analytics dashboard built using Machine Learni
 
 ## 🛠 Tech Stack
 
-- Python
-- Streamlit
-- Pandas
-- NumPy
-- Scikit-learn
-- Plotly
-- Matplotlib
-- Seaborn
-- Joblib
+streamlit
+pandas
+numpy
+scikit-learn
+plotly
+matplotlib
+seaborn
+joblib
+imbalanced-learn
 
 ---
 
