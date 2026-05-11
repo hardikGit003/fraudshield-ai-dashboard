@@ -69,15 +69,11 @@ st.set_page_config(
 @st.cache_data
 def load_data():
 
-    url = "https://drive.google.com/uc?export=download&id=1PnD1yJM1EpEjt1o9h2U1MTxEPRkURNQk"
-
-    df = pd.read_csv(url)
+    df = pd.read_csv("sample_creditcard.csv")
 
     return df
 
 df = load_data()
-st.write(df.head())
-st.write(df.columns)
 # Load model and scaler
 model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")
