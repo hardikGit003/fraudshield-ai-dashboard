@@ -66,8 +66,16 @@ st.set_page_config(
 # LOAD DATA
 # ---------------------------------------------------
 
-df = pd.read_csv("creditcard.csv")
+@st.cache_data
+def load_data():
 
+    url = "https://drive.google.com/uc?id=1PnD1yJM1EpEjt1o9h2U1MTxEPRkURNQk"
+
+    df = pd.read_csv(url)
+
+    return df
+
+df = load_data()
 # Load model and scaler
 model = joblib.load("model.pkl")
 scaler = joblib.load("scaler.pkl")
